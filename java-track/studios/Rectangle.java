@@ -26,6 +26,11 @@ public class Rectangle {
 	public int getWidth(){
 		return width;
 	}
+	
+	public int getArea(){
+		area = this.length * this.width;
+		return area;
+	}
 	//method is it bigger than another rectangle
 	public boolean isBigger (int area2){
 		if (this.area > area2){

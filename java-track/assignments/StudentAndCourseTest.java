@@ -69,6 +69,7 @@ public class StudentAndCourseTest extends TestCase {
 		int credits = 0;
 		double gpatotal = 0;
 		for (int i = 0; i < 100; i++) {
+			System.out.println(s);
 			int c = (int)(Math.random() * 3 + 1);//1 to 3 credits
 			double g = Math.random() * 4;//0 to 4
 			credits += c;
@@ -132,6 +133,7 @@ public class StudentAndCourseTest extends TestCase {
 	@Test
 	public void testStudentToString() {
 		for (int i = 0; i < 100; i++) {
+
 			double a =  (Math.random() * 5000);
 			double b =  (Math.random() * 5000);
 			int c = (int)Math.random() * 500000;
