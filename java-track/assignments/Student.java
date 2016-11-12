@@ -6,7 +6,7 @@ public class Student {
 	private int credits;
 	private double gpa;
 	private double qualityScore;
-	private double courseGrade;
+	//private double courseGrade;
 	private double tuition;
 	private String classStanding;
 
@@ -19,7 +19,7 @@ public class Student {
 		this.credits = 0;
 		this.gpa = 0.0;
 		this.qualityScore = 0.0;
-		this.courseGrade = 0.0;
+		//this.courseGrade = 0.0;
 		this.classStanding = null;
 	}
 	public String getName(){
@@ -119,15 +119,15 @@ public class Student {
 		//System.out.println(this.lastName);
 		int bbID = (StudentA.getStudentID() + StudentB.getStudentID());
 //		studentID = (StudentA.studentID + StudentB.getStudentID());
-		System.out.println("Student ID test:" + bbID);
-		System.out.println(StudentA.getStudentID());
-		System.out.println(StudentB.getStudentID());
-		System.out.println(StudentA.getStudentID() + StudentB.getStudentID());
+	//	System.out.println("Student ID test:" + bbID);
+		//System.out.println(StudentA.getStudentID());
+//		System.out.println(StudentB.getStudentID());
+	//	System.out.println(StudentA.getStudentID() + StudentB.getStudentID());
 		
 		Student baby = new Student (bbFN, bbLN, bbID);
 		
 		
-		System.out.println("second test" + baby.getStudentID());
+	//	System.out.println("second test" + baby.getStudentID());
 		baby.gpa = (StudentA.getGPA() + StudentB.getGPA())/2;
 		//System.out.println(this.gpa);
 		if (StudentA.credits > StudentB.credits){
@@ -151,11 +151,4 @@ public class Student {
 		return "Name: " + this.firstName + " " + this.lastName + " Student ID: " + this.studentID;
 	}
 		
-		
-	
-	
-	
-
 }
-
-
