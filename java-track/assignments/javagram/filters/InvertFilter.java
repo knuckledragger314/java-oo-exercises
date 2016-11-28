@@ -1,32 +1,32 @@
 package javagram.filters;
 
-import javagram.Picture;
 import java.awt.Color;
 
-public class BlueFilter implements Filter {
-//TODO1 - somewhere in here "refactor from orange to fruit per CB video
-//Create an interface named Filter, so that BlueFilter implements Filter. 
-//Refactor the code in Javagram to use a reference of type Filter rather than a BlueFilter reference. To do this, you'll need to modify code with main as well as the definition of the method getFilter. Your interface should live in the javagram.filters package.
+import javagram.Picture;
+
+public class InvertFilter implements Filter{
 	int r = 0;
 	int b = 0;
 	int g = 0;
-	
+
 	@Override
 	public int getRed() {
-		return r;
+		// TODO Auto-generated method stub
+		return 0;
 	}
-
 	@Override
 	public int getBlue() {
-		return b;
+		// TODO Auto-generated method stub
+		return 0;
 	}
-
 	@Override
 	public int getGreen() {
-		return g;
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
 	
-	public Picture process(Picture original) { 
+public Picture process(Picture original) { 
 		
 		Picture processed = new Picture(original.width(), original.height());
         
@@ -37,16 +37,18 @@ public class BlueFilter implements Filter {
 	    	  Color c = original.get(i, j);
 	          
 	          //get color components from each pixel
+	    	  // colors = (red, green, blue)
 	          r = c.getRed();
 	          g = c.getGreen();
 	          b = c.getBlue();
 	          
-	          int newBlue = (r + g + b) / 3;
+	          int newRed = 255 - r;
+	          int newGreen = 255 - g; 
+	          int newBlue = 255 - b;
 	          
-	          processed.set(i, j, new Color(0, 0, newBlue));	  
+	          processed.set(i, j, new Color(newRed, newGreen, newBlue));	  
 	      }
 	    }	
 		return processed;
 	}
-	
 }
